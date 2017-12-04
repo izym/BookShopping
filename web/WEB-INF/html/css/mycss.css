@@ -1,25 +1,61 @@
-.text1{
+.login_tiyle{
     font-size: 60px;
     font-family: "Book Antiqua";
     color: #f5905d;
 }
 .login_img{
     position: absolute;
-    width: 394px;
-    height: 357px;
-    top:200px;
-    right:100px;
+    width: 300px;
+    height: 300px;
+    top:150px;
+    left:200px;
 }
 .login_background{
     background-color: #f5f3d3;
     background-size:100% 100%;
 }
-.login_form_input_myname{
-    font-weight: bold;
-    font-size: 30px;
-    font-family: "Microsoft Himalaya";
-    color: #c5731c;
-    position: absolute;
-    top:300px;
-    left:200px;
+
+.login_form_input{
+    height: 30px;
+    width: 200px;
+    margin-left: 10%;
+    margin-top: 20%;
+}
+
+.login_form_input_password{
+    height: 30px;
+    width: 200px;
+    margin-left: 10%;
+    margin-top: 8%;
+}
+
+.login_form{
+    height: 350px;
+    width: 300px;
+    background: #ffc18e;
+    margin-top: 7%;
+    margin-left: 65%;
+}
+.footer_container{
+    margin-left: 3%;
+    width: auto;
+}
+.home_text{
+    font-size: 20px;
+    font-family: Algerian;
+    color: white;
+    stroke: 10px;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+.login_text{
+    margin-top: 30%;
+    margin-left: 20%;
+}
+
+.login_form_submit{
+    height: 30px;
+    width: 200px;
+    margin-left: 10%;
+    margin-top: 9%;
 }

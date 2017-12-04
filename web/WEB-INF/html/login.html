@@ -3,29 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <link href="./css/mycss.css" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/form.css" rel="stylesheet" type="text/css" media="all"/>
     <style>
     </style>
 </head>
+
 <body class="login_background">
+
+<!--头部-->
+<div class="header">
+    <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+            <p class="home_text">你好，蛋糕屋.</p>
+        </nav>
+    </div>
+</div>
+
+<!--main-->
 <div>
-    <p class="text1">欢迎来到。。。蛋糕屋</p>
-    <form action="" method="post">
-        <div>
-            <input name="" type="text" value="新用户注册">
-        </div><br/>
-        <div class="login_form_input_myname"><lable for="myName">用户名</lable>
-        <input class="" name="myName" type="text" style="width: 230px"/>
-        </div><br/>
-        <div>
-        <label>密码</label>
-        <input name="myPass" type="password">
-        </div><br/>
-        <div><input name="submitten" type="submit" value="提交">
-        </div>
-        <div><input name="" type="reset" value="重置">
-        </div>
-    </form>
     <img class="login_img" src="images/2.png"/>
+    <div class="login_form">
+        <!--<div class="login_text">-->
+            <!--<h5 >用户登录</h5>-->
+        <!--</div>-->
+
+        <div>
+            <form action="" method="post">
+                <input class="login_form_input" name="myName" type="text" ><br/>
+                <input class="login_form_input_password" name="myPass" type="password"><br/>
+                <input class="login_form_submit" name="submit" type="submit" value="登录">
+            </form>
+            <div>
+                <h5 class="login_text">用户登录</h5>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--//footer-->
+<div class="footer-bottom">
+    <a href="#"><p class="footer_container">商城首页</p></a>
 </div>
 </body>
 </html>

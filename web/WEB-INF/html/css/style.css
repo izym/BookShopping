@@ -671,8 +671,10 @@ ul.rating li a:hover, .price_single a:hover, ul.size li a:hover {
 }
 .footer-bottom {
     background-color: #5D4B33;
-    padding: 2em 0;
-    text-align: center;
+    height: 50px;
+    text-align: left;
+    padding: 0.8em 0;
+    margin-top: 6%;
 }
 .footer-bottom p {
     font-size: 1em;
