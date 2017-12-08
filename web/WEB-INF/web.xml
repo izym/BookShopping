@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-    <display-name>MyGobangWeb</display-name>
+    <display-name>CakeShopping</display-name>
     <filter>
         <filter-name>nutz</filter-name>
         <filter-class>org.nutz.mvc.NutFilter</filter-class>

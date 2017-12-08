@@ -18,14 +18,14 @@ public class UserController {
 
     @Ok("json")
     @Fail("http:500")
-    @At("create_game")
+    @At("doLogin")
     @POST
-    private Object doLogin(@Param("userName")String userName, @Param("psw")String password){
+    @GET
+    public Object doLogin(@Param("userName")String userName, @Param("psw")String password){
         NutMap re = new NutMap();
         if(userName!=null&&password!=null) {
             UserEntity u = dao.fetch(UserEntity.class, Cnd.where("user_name", "=", userName).and("psw", "=", password));
             if (u!=null) {
-
                 re.put("status", 1);
                 re.put("msg", "OK");
             } else {

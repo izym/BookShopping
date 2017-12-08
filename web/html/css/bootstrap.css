@@ -1581,6 +1581,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  /*background: #f5f3d3;*/
 }
 @media (min-width: 768px) {
   .container {
@@ -1594,7 +1595,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 950px;
   }
 }
 .container-fluid {
@@ -4400,7 +4401,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
-  color: #777;
+  color: #fefffa;
+  font-size: 20px;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {

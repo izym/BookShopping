@@ -674,7 +674,7 @@ ul.rating li a:hover, .price_single a:hover, ul.size li a:hover {
     height: 50px;
     text-align: left;
     padding: 0.8em 0;
-    margin-top: 6%;
+    margin-top: 0;
 }
 .footer-bottom p {
     font-size: 1em;
@@ -693,6 +693,7 @@ ul.rating li a:hover, .price_single a:hover, ul.size li a:hover {
 /*--products--*/
 .products{
     padding: 5em 0;
+    background-color: #f5f3d3
 }
 .product-model-sec {
     margin: 4em 0 0 0;
@@ -785,16 +786,17 @@ ul.rating li a:hover, .price_single a:hover, ul.size li a:hover {
 	left:0;
 }
 .product-grid {
-	width: 30%;
-	margin: 0 3% 4% 0;
-	float: left;	
+	width: 32%;
+	margin: 0 1% 8% 0;
+	float: left;
+    /*text-align: center;*/
 	position: relative;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
 	-moz-transition: 0.5s all;
 	-o-transition: 0.5s all;
 	min-height: 200px;
-	border:2px solid #fff;
+	border:2px solid #f5f3d3 ;
 }
 .product-grid:hover {
 	z-index: 1;
@@ -1655,6 +1657,7 @@ a.order:hover{
 .total-item,.cart-items{
 	margin-top:0em;
 	padding:5em 0;
+    background-color: #f5f3d3;
 }
 
 .total-item h3 {
@@ -2117,6 +2120,7 @@ span.glyphicon.glyphicon-map-marker {
 }
 .products {
     padding: 4em 0;
+    background-color: #f5f3d3;
 }
 .item_quantity {
     padding: 6px;
@@ -2155,6 +2159,7 @@ h2 {
 }
 .total-item, .cart-items {
     padding: 4em 0;
+    background-color: #f5f3d3;
 }
 .cart-items h2 {
     font-size: 3em;
@@ -2190,6 +2195,7 @@ h2 {
 }
 .products {
     padding: 4em 0 2em;
+    background-color: #f5f3d3
 }
 .footer {
     padding: 4em 0;
@@ -2299,6 +2305,7 @@ h1.navbar-brand {
 }
 .products {
     padding: 3em 0 2em;
+    background-color: #f5f3d3
 }
 h2 {
     font-size: 3.3em;
@@ -2347,6 +2354,7 @@ h4.panel-title a {
 }
 .total-item, .cart-items {
     padding: 3.5em 0;
+    background-color: #f5f3d3;
 }
 .cart-items h2 {
     font-size: 2.5em;
@@ -2719,6 +2727,7 @@ input[type="submit"] {
 }
 .products {
     padding: 2em 0 2em;
+    background-color: #f5f3d3
 }
 .items {
     margin: 12px 0 0px 38px;
@@ -2757,6 +2766,7 @@ ul.size li a {
 }
 .total-item, .cart-items {
     padding: 2em 0;
+    background-color: #f5f3d3;
 }
 .cart-items h2 {
     font-size: 2em;
@@ -3013,6 +3023,7 @@ ul.qty li p {
 }
 .total-item, .cart-items {
     padding: 2em 0 0;
+    background-color: #f5f3d3;
 }
 .register {
     width: 100%;
@@ -3199,6 +3210,7 @@ h1.navbar-brand {
 }
 .products {
     padding: 1em 0;
+    background-color: #f5f3d3
 }
 .product-grid {
     width: 100%;
@@ -3262,6 +3274,7 @@ span.item_price {
 }
 .total-item, .cart-items {
     padding: 1em 0 0;
+    background-color: #f5f3d3;
 }
 .cart-items h2 {
     font-size: 1.7em;
