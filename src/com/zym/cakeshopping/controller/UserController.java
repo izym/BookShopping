@@ -21,7 +21,6 @@ public class UserController {
     @Fail("http:500")
     @At("doLogin")
     @POST
-    @GET
     public Object doLogin(@Param("userName")String userName, @Param("psw")String password){
         NutMap re = new NutMap();
         if(userName!=null&&password!=null) {
@@ -29,6 +28,8 @@ public class UserController {
             if (u!=null) {
                 re.put("status", "1");
                 re.put("msg", "OK");
+                re.put("userId", u.getUserId());
+                re.put("userName", u.getUserName());
             } else {
                 re.put("status", "0");
                 re.put("msg", "账号或密码错误");
@@ -37,8 +38,29 @@ public class UserController {
             re.put("status", "0");
             re.put("msg", "账号或密码错误");
         }
-        Gson gson = new Gson();
-
-        return gson.toJson(re);
+        return new Gson().toJson(re);
     }
+
+
+    @Ok("json")
+    @Fail("http:500")
+    @At("doRegiste")
+    @POST
+    public Object doRegiste(@Param("userName")String userName, @Param("psw")String password){
+        NutMap re = new NutMap();
+        if(userName!=null&&password!=null) {
+            UserEntity userEntity = new UserEntity();
+            userEntity.setUserName(userName);
+            userEntity.setPsw(password);
+            userEntity.setMoney(0);
+            dao.insert(userEntity);
+            re.put("status", "1");
+            re.put("msg", "注册成功");
+        }else{
+            re.put("status", "0");
+            re.put("msg", "注册失败");
+        }
+        return new Gson().toJson(re);
+    }
+
 }
