@@ -28,6 +28,7 @@ public class ShopCartController {
     @Fail("http:500")
     @At("/add_shop_cart")
     @POST
+    @GET
     public Object addShopCart(@Param("cakeId")Integer cakeId, @Param("userId") Integer userId){
         NutMap re = new NutMap();
         if(cakeId!=null&&userId!=null){
@@ -42,7 +43,7 @@ public class ShopCartController {
             re.put("status", "0");
             re.put("msg", "加入购物车失败");
         }
-        return new Gson().toJson(re);
+        return re;
     }
 
 
@@ -50,6 +51,7 @@ public class ShopCartController {
     @Fail("http:500")
     @At("/del_shop_cart")
     @POST
+    @GET
     public Object delShopCart(@Param("cakeId")Integer cakeId, @Param("userId") Integer userId){
         NutMap re = new NutMap();
         if(cakeId!=null&&userId!=null){
@@ -69,7 +71,7 @@ public class ShopCartController {
             re.put("status", "0");
             re.put("msg", "删除失败");
         }
-        return new Gson().toJson(re);
+        return re;
     }
 
 
@@ -77,6 +79,7 @@ public class ShopCartController {
     @Fail("http:500")
     @At("/buy")
     @POST
+    @GET
     public Object buy(@Param("userId") Integer userId){
         NutMap re = new NutMap();
         if(userId!=null){
@@ -108,13 +111,14 @@ public class ShopCartController {
             re.put("status", "0");
             re.put("msg", "结算失败");
         }
-        return new Gson().toJson(re);
+        return re;
     }
 
     @Ok("json")
     @Fail("http:500")
     @At("/get_orders")
     @GET
+    @POST
     public Object getOrders(@Param("userId") Integer userId, @Param("state") Integer state){
         NutMap re = new NutMap();
         if(userId!=null){
@@ -136,7 +140,7 @@ public class ShopCartController {
             re.put("status", "0");
             re.put("msg", "没有相关信息");
         }
-        return new Gson().toJson(re);
+        return re;
     }
 
 }

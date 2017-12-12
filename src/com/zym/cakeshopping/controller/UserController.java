@@ -19,8 +19,9 @@ public class UserController {
 
     @Ok("json")
     @Fail("http:500")
-    @At("doLogin")
+    @At("do_login")
     @POST
+    @GET
     public Object doLogin(@Param("userName")String userName, @Param("psw")String password){
         NutMap re = new NutMap();
         if(userName!=null&&password!=null) {
@@ -38,14 +39,15 @@ public class UserController {
             re.put("status", "0");
             re.put("msg", "账号或密码错误");
         }
-        return new Gson().toJson(re);
+        return re;
     }
 
 
     @Ok("json")
     @Fail("http:500")
-    @At("doRegiste")
+    @At("do_registe")
     @POST
+    @GET
     public Object doRegiste(@Param("userName")String userName, @Param("psw")String password){
         NutMap re = new NutMap();
         if(userName!=null&&password!=null) {
@@ -60,7 +62,7 @@ public class UserController {
             re.put("status", "0");
             re.put("msg", "注册失败");
         }
-        return new Gson().toJson(re);
+        return re;
     }
 
 }
