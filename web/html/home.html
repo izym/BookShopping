@@ -5,6 +5,7 @@
     <title>Products</title>
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/mycss.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
     <!-- js -->
     <script src="js/jquery.min.js"></script>
@@ -25,8 +26,10 @@
     <!-- //the jScrollPane script -->
     <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
     <!-- the mousewheel plugin -->
+    <script type="text/javascript" src="js/my_js.js"></script>
 </head>
 <body>
+
 <!--头部-->
 <div class="header">
     <div class="container">
@@ -36,12 +39,21 @@
                     <li ><a href="home.html" class="navbar-brand"> 商品</a></li>
                     <li ><a href="cart-box.html" class="navbar-brand"> 购物车</a></li>
                     <li ><a href="myorder.html" class="navbar-brand"> 我的订单</a></li>
+                    <!--<div class="home_judgement_location">-->
+                        <!--<p>我的订单</p>-->
+                    <!--</div>-->
                 </ul>
             </div>
         </nav>
     </div>
 </div>
 <!--//头部-->
+
+<!--模式选择-->
+<div class="home_judgement_location">
+    <p class="home_judgement_location_p">我的订单</p>
+</div>
+
 <!--Products-->
 <div class="products " >
     <div class="container">
@@ -243,4 +255,7 @@
 </div>
 
 </body>
+<script>
+    alert(getCookie("userName"));
+</script>
 </html>

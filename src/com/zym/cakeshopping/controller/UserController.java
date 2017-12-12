@@ -1,5 +1,6 @@
 package com.zym.cakeshopping.controller;
 
+import com.google.gson.Gson;
 import com.zym.cakeshopping.dao.UserEntity;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
@@ -26,16 +27,18 @@ public class UserController {
         if(userName!=null&&password!=null) {
             UserEntity u = dao.fetch(UserEntity.class, Cnd.where("user_name", "=", userName).and("psw", "=", password));
             if (u!=null) {
-                re.put("status", 1);
+                re.put("status", "1");
                 re.put("msg", "OK");
             } else {
-                re.put("status", 0);
+                re.put("status", "0");
                 re.put("msg", "账号或密码错误");
             }
         }else{
-            re.put("status", 0);
+            re.put("status", "0");
             re.put("msg", "账号或密码错误");
         }
-        return re;
+        Gson gson = new Gson();
+
+        return gson.toJson(re);
     }
 }

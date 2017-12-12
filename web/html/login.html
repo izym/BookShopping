@@ -7,9 +7,7 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/form.css" rel="stylesheet" type="text/css" media="all"/>
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript">
-
-    </script>
+    <script type="text/javascript" src="./js/my_js.js"></script>
 </head>
 
 <body class="login_background">
@@ -29,14 +27,11 @@
     <div class="login_form">
         <div>
             <h5 class="login_text">用户登录</h5>
-            <form action="/doLogin" method="post">
-                <input class="login_form_input" name="userName" type="text" placeholder="用户名" ><br/>
-                <input class="login_form_input_password" name="psw" type="password" placeholder="密码"><br/>
-                <input class="login_form_submit" name="submit" type="submit" value="登&nbsp;&nbsp;&nbsp;&nbsp;录">
-            </form>
+                <input class="login_form_input" id="userName" type="text" placeholder="用户名" ><br/>
+                <input class="login_form_input_password" id="psw" type="password" placeholder="密码"><br/>
+            <input class="login_form_submit" value="登    录" type="submit" onclick="javascript:doLogin()" />
         </div>
     </div>
-
 </div>
 
 <!--//footer-->
