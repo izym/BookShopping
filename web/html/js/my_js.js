@@ -5,7 +5,7 @@ function doLogin() {
     var userName = $("#userName").val();
     var psw = $("#psw").val();
     $.post(
-        "/doLogin",
+        "/do_login",
         {
             userName: userName,
             psw: psw
