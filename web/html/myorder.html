@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>myorder</title>
+    <!--<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">-->
+    <!--<link href="css/style.css" type="text/css" rel="stylesheet" media="all">-->
+    <!--&lt;!&ndash; js &ndash;&gt;-->
+    <!--<script src="js/jquery.min.js"></script>-->
+    <!--<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>-->
+    <!--&lt;!&ndash; //js &ndash;&gt;-->
+    <!--&lt;!&ndash; cart &ndash;&gt;-->
+    <!--<script src="js/simpleCart.min.js"> </script>-->
+    <!--&lt;!&ndash; cart &ndash;&gt;-->
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/mycss.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
     <!-- js -->
     <script src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
@@ -12,21 +23,49 @@
     <!-- cart -->
     <script src="js/simpleCart.min.js"> </script>
     <!-- cart -->
+    <!-- the jScrollPane script -->
+    <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+
+    <script type="text/javascript" id="sourcecode">
+        $(function()
+        {
+            $('.scroll-pane').jScrollPane();
+        });
+    </script>
+    <!-- //the jScrollPane script -->
+    <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+    <!-- the mousewheel plugin -->
+    <script type="text/javascript" src="js/my_js.js"></script>
 </head>
-<body>
+<body class="login_background">
 <!--头部-->
 <div class="header">
     <div class="container">
         <nav class="navbar navbar-default" role="navigation">
             <div>
                 <ul class="nav navbar-nav">
-                    <li ><a href="home.html" class="navbar-brand"> 商品</a></li>
-                    <li ><a href="cart-box.html" class="navbar-brand"> 购物车</a></li>
-                    <li ><a href="myorder.html" class="navbar-brand"> 我的订单</a></li>
+                    <li ><a href="home.html" class="navbar-brand" id="productsclick"> 商品</a></li>
+                    <li ><a href="shop_cart.html" class="navbar-brand" id="addcart"> 购物车</a></li>
+                    <li ><a href="myorder.html" class="navbar-brand" id="addmyorder"> 我的订单</a></li>
                 </ul>
             </div>
         </nav>
     </div>
 </div>
+
+<!--money-->
+<div>
+    <p id="money">余额:</p>
+</div>
+<!--cart-box-->
+<div class="cart-items">
+    <div class="container" id="order">
+        <h2>所有订单</h2>
+    </div>
+</div>
 </body>
+<script>
+    $("#money").append(getCookie("money"));
+    get_orders();
+</script>
 </html>

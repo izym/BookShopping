@@ -7,6 +7,8 @@
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/form.css" rel="stylesheet" type="text/css" media="all"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/my_js.js"></script>
 </head>
 
 <body class="login_background">
@@ -29,12 +31,10 @@
 
         <div>
             <p class="register_form_p">新用户注册</p>
-            <form action="" method="post">
-                <input class="register_form_myname" name="myName" type="text" placeholder="用户名" ><br/>
-                <input class="register_form_mypass" name="myPass" type="password" placeholder="输入密码"><br/>
-                <input class="register_form_rewritemypass" name="rewritemypass" type="text" placeholder="再次输入密码"><br/>
-                <input class="residter_form_submit" name="submit" type="submit" value="注册">
-            </form>
+                <input class="register_form_myname" id="myName" type="text" placeholder="用户名" ><br/>
+                <input class="register_form_mypass" id="myPass" type="password" placeholder="输入密码"><br/>
+                <input class="register_form_rewritemypass" id="rewritemypass" type="password" placeholder="再次输入密码"><br/>
+                <input class="residter_form_submit" type="submit" value="注    册" onclick="javascript:doregister()" />
         </div>
     </div>
 

@@ -31,6 +31,7 @@ public class UserController {
                 re.put("msg", "OK");
                 re.put("userId", u.getUserId());
                 re.put("userName", u.getUserName());
+                re.put("money", u.getMoney());
             } else {
                 re.put("status", "0");
                 re.put("msg", "账号或密码错误");

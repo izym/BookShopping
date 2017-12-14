@@ -101,9 +101,11 @@ public class ShopCartController {
                     dao.update(cartList,"^state$");
                     re.put("status", "1");
                     re.put("msg", "结算成功");
+                    re.put("money", sum);
                 }else{
                     re.put("status", "0");
                     re.put("msg", "结算失败，余额不足");
+                    re.put("money", 0);
                 }
 
             }

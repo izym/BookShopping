@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Products</title>
+    <title>cart-box</title>
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/mycss.css" type="text/css" rel="stylesheet" media="all">
@@ -25,10 +25,9 @@
     <!-- //the jScrollPane script -->
     <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
     <!-- the mousewheel plugin -->
-    <script type="text/javascript" src="./js/my_js.js"></script>
+    <script type="text/javascript" src="js/my_js.js"></script>
 </head>
 <body>
-
 <!--头部-->
 <div class="header">
     <div class="container">
@@ -38,56 +37,23 @@
                     <li><a href="home.html" class="navbar-brand" id="productsclick"> 商品</a></li>
                     <li><a href="shop_cart.html" class="navbar-brand" id="addcart"> 购物车</a></li>
                     <li><a href="myorder.html" class="navbar-brand" id="addmyorder"> 我的订单</a></li>
-                    <!--<div class="home_judgement_location">-->
-                    <!--<p>我的订单</p>-->
-                    <!--</div>-->
                 </ul>
             </div>
         </nav>
     </div>
 </div>
-<!--//头部-->
 
-<!--模式选择-->
-<div class="home_judgement_location">
-    <p class="home_judgement_location_p" id="wel_text">欢迎，</p>
-</div>
 
-<!--退出登录-->
-<p class="register_out" onclick="doLogout()">退出登录</p>
-
-<!--Products-->
-<div class="products ">
-    <div class="container">
-        <h2>蛋糕</h2>
-        <div id="list">
-
-        </div>
+<!--cart-box-->
+<div class="cart-items">
+    <div class="container" id="cart">
+        <h2>购物车</h2>
     </div>
-</div>
-<!--//Products-->
-
-<!--//footer-->
-<div class="footer-bottom">
-    <div class="container">
-        <p>蛋糕屋商品</p>
-    </div>
+    <input type="submit" class="cart-box_pay" value="结算" onclick="pay()"/>
 </div>
 
 </body>
-
 <script>
-    if (getCookie("userName") != "") {
-        $("#wel_text").append(getCookie("userName"));
-    } else {
-        $("#wel_text").append("<a href='login.html'>请登录</a>");
-    }
-
-    get_cakes();
-
-    function doLogout() {
-        setCookie('userName', '', '7');
-        window.location.href = "/html/login.html";
-    }
+    get_carts();
 </script>
 </html>
